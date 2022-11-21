@@ -1,4 +1,4 @@
-# toy-project
+# toy-project-back
 
 #### Tools
 ![IntelliJ](https://img.shields.io/badge/IntelliJIDEA-000000?style=for-the-badge&logo=IntelliJIDEA&logoColor=fff)  
