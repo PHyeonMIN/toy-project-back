@@ -52,8 +52,8 @@ public class SecurityConfig {
 //                .httpBasic().disable()
                 .exceptionHandling().authenticationEntryPoint(authEntryPoint).and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
-                .authorizeRequests().antMatchers("/api/test/**").permitAll()
-                .antMatchers("api/test/**").permitAll()
+                .authorizeRequests().antMatchers("/api/auth/**").permitAll()
+                                    .antMatchers("api/test/**").permitAll()
                 .anyRequest().authenticated();
                 http.addFilterBefore(jwtAuthenticationFilter,UsernamePasswordAuthenticationFilter.class);
         return http.build();

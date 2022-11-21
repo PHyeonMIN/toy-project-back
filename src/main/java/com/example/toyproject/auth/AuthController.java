@@ -66,19 +66,23 @@ public class AuthController {
         if(userRepository.existsByEmail(signUpRequest.getEmail())){
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("email is already taken");
         }
+
         String hassedPassword = passwordEncoder.encode(signUpRequest.getPassword());
+
         Set<Role> roles = new HashSet<>();
         Optional<Role> userRole = roleResitory.findByName(ERole.ROLE_USER);
         if(userRole.isEmpty()){
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("role not found");
         }
         roles.add(userRole.get());
+
         User user = new User().builder()
                 .username(signUpRequest.getUsername())
                 .email(signUpRequest.getEmail())
                 .password(hassedPassword)
                 .roles(roles)
                 .build();
+
         userRepository.save(user);
         return ResponseEntity.ok("User registered success");
     }

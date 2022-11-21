@@ -1,0 +1,29 @@
+### 회원가입1
+POST http://localhost:8080/api/auth/signup
+Content-Type: application/json
+
+{
+  "username": "park1",
+  "email": "test1@naver.com",
+  "password": 1234
+}
+
+### 회원가입2
+POST http://localhost:8080/api/auth/signup
+Content-Type: application/json
+
+{
+  "username": "park2",
+  "email": "test2@naver.com",
+  "password": 1234
+}
+
+
+### 로그인
+POST http://localhost:8080/api/auth/signin
+Content-Type: application/json
+
+{
+  "username": "park",
+  "password": 1234
+}

@@ -29,11 +29,8 @@ public class User {
     @JoinTable(name = "users_to_roles",
                 joinColumns = @JoinColumn(name="user_id"),
                 inverseJoinColumns = @JoinColumn(name="role_id"))
+    @Column
     private Set<Role> roles = new HashSet<>();
-
-    public void setRoles(Set<Role> roles) {
-        this.roles = roles;
-    }
 
     @Builder
     public User(Long id, String username, String email, String password, Set<Role> roles) {
