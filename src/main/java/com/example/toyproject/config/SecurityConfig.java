@@ -1,6 +1,6 @@
 package com.example.toyproject.config;
 
-import com.example.toyproject.Exception.AuthEntryPointEx;
+import com.example.toyproject.exception.AuthEntryPointEx;
 import com.example.toyproject.auth.UserDetailsServiceImpl;
 import com.example.toyproject.config.jwt.JwtAuthenticationFilter;
 import lombok.RequiredArgsConstructor;

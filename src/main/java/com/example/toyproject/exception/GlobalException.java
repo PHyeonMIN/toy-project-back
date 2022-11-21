@@ -1,4 +1,4 @@
-package com.example.toyproject.Exception;
+package com.example.toyproject.exception;
 
 import lombok.Getter;
 

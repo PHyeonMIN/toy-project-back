@@ -1,6 +1,6 @@
-package com.example.toyproject.Exception.CustomException;
+package com.example.toyproject.exception.CustomException;
 
-import com.example.toyproject.Exception.GlobalException;
+import com.example.toyproject.exception.GlobalException;
 
 /**
  * status -> 404
