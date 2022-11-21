@@ -8,9 +8,8 @@ import java.util.Set;
 
 @Entity
 @Table(name = "users")
-@Data
-@Builder
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Getter
+@NoArgsConstructor()
 public class User {
 
     @Id
@@ -36,4 +35,12 @@ public class User {
         this.roles = roles;
     }
 
+    @Builder
+    public User(Long id, String username, String email, String password, Set<Role> roles) {
+        this.id = id;
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.roles = roles;
+    }
 }
